@@ -1,0 +1,18 @@
+.title {
+  font-size: 25px;
+}
+
+.btn {
+  margin-right: 15px;
+  padding: 12px;
+  background-color: white;
+  font-size: medium;
+  font-weight: 700;
+  border-radius: 4px;
+  border-color: gray;
+  cursor: pointer;
+}
+.btn :hover,
+:focus {
+  background-color: aqua;
+}
