@@ -30,10 +30,10 @@ class Feedback extends React.Component {
   };
 
   render() {
-    const state = this.state;
-    const { good, neutral, bad } = state;
-    const total = good + neutral + bad;
-    const positivePercentage = ((good / total) * 100).toFixed([0]);
+    // const state = this.state;
+    // const { good, neutral, bad } = state;
+    // const total = good + neutral + bad;
+    // const positivePercentage = ((good / total) * 100).toFixed([0]);
     return (
       <div>
         <h1 className={css.title}>Please leave feedback</h1>
