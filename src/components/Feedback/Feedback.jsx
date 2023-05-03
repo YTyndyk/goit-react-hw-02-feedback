@@ -1,5 +1,6 @@
-import css from './Feedback.module.css';
 import React from 'react';
+import PropTypes from 'prop-types';
+import css from './Feedback.module.css';
 import Statistics from './Statistics';
 import FeedbackOptions from './FeedbackOptions';
 import Section from './Section';
@@ -55,5 +56,11 @@ class Feedback extends React.Component {
     );
   }
 }
-
+Feedback.propTypes = {
+  good: PropTypes.number,
+  neurtral: PropTypes.number,
+  bad: PropTypes.number,
+  countTotalFeedback: PropTypes.func,
+  countPositiveFeedbackPercentage: PropTypes.func,
+};
 export default Feedback;
