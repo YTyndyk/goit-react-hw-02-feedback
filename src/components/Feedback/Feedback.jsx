@@ -3,7 +3,6 @@ import React from 'react';
 import Statistics from './Statistics';
 import FeedbackOptions from './FeedbackOptions';
 import Section from './Section';
-import Title from './Title';
 
 class Feedback extends React.Component {
   state = {
