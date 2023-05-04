@@ -12,23 +12,8 @@ class Feedback extends React.Component {
     bad: 0,
   };
 
-  onLeaveFeedback = e => {
-    const obj = e.target.textContent.toLocaleLowerCase();
-    switch (obj) {
-      case 'good':
-        this.setState(prevState => {
-          return { good: prevState.good + 1 };
-        });
-        break;
-      case 'neutral':
-        this.setState(prevState => ({ neutral: prevState.neutral + 1 }));
-        break;
-      case 'bad':
-        this.setState(prevState => ({ bad: prevState.bad + 1 }));
-        break;
-      default:
-        break;
-    }
+  leaveFeedback = e => {
+    this.setState({ [e]: this.state[e] + 1 });
   };
   countTotalFeedback = ({ good, neutral, bad }) => good + neutral + bad;
   countPositiveFeedbackPercentage = ({ good }) =>
@@ -40,7 +25,7 @@ class Feedback extends React.Component {
       <div className={css.profile}>
         <Section title="Please leave feedback">
           <FeedbackOptions
-            onLeaveFeedback={this.onLeaveFeedback}
+            onLeaveFeedback={this.leaveFeedback}
             options={Object.keys(this.state)}
           />
         </Section>
