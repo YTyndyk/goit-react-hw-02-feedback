@@ -39,7 +39,10 @@ class Feedback extends React.Component {
     return (
       <div className={css.profile}>
         <Section title="Please leave feedback">
-          <FeedbackOptions onLeaveFeedback={this.onLeaveFeedback} />
+          <FeedbackOptions
+            onLeaveFeedback={this.onLeaveFeedback}
+            options={Object.keys(this.state)}
+          />
         </Section>
         <Section title="Statistics">
           <Statistics

@@ -26,3 +26,8 @@
   margin-block-start: 8px;
   margin-block-end: 8px;
 }
+.btnWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
